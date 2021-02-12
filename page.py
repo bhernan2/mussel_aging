@@ -104,7 +104,9 @@ def render_page_content(pathname):
                 html.Br(),
                 html.P("Description: This space will monitor and track the status of ongoing projects for the stream ecology lab. It will include interactive maps, charts, figures and summaries.", className="lead"),
                 ]),
+            ],fluid=True, style={'textAlign': 'left'}),
             html.Br(),
+            dbc.Container([      
                 dbc.Row([
                     dbc.Col([
                         dbc.Card([
@@ -115,7 +117,10 @@ def render_page_content(pathname):
                             ], className="flip-card-front", color="", inverse=False, style={"display": "flex"}),
                         dbc.Card([
                             dbc.CardBody([
-                                html.H4('Important dates', style={'font-weight': 'bold'})
+                                html.H4('Important dates:', style={'font-weight': 'bold'}),
+                                html.H4('To do:', style={'font-weight': 'bold'}),
+                                html.P('Pairwise comparison between agers', className='lead'),
+                                
                                 ]),
                             ],className="flip-card-back", color="", inverse=False)
                     ],className="flip-card-inner",), 
@@ -135,32 +140,80 @@ def render_page_content(pathname):
                             ],className="flip-card-back", color="", inverse=False)
                     ],className="flip-card-inner",), 
                 ],className="flip-card"),
-                footer,
-                ],fluid=True, style={'textAlign': 'left'}),
+                
+                dbc.Row([
+                    dbc.Col([
+                        dbc.Card([
+                            dbc.CardBody([
+                                html.H4("Summer project"),
+                                dbc.CardImg(src="/assets/_musseling.jpg"),
+                                ])
+                            ], className="flip-card-front", color="", inverse=False, style={"display": "flex"}),
+                        dbc.Card([
+                            dbc.CardBody([
+                                html.H4('Important dates', style={'font-weight': 'bold'})
+                                ]),
+                            ],className="flip-card-back", color="", inverse=False)
+                    ],className="flip-card-inner",), 
+                ],className="flip-card"),
+
+                dbc.Row([
+                    dbc.Col([
+                        dbc.Card([
+                            dbc.CardBody([
+                                html.H4("Zebra mussels project"),
+                                dbc.CardImg(src="/assets/_zebra.jpg"),
+                                ])
+                            ], className="flip-card-front", color="", inverse=False, style={"display": "flex"}),
+                        dbc.Card([
+                            dbc.CardBody([
+                                html.H4('Important dates', style={'font-weight': 'bold'})
+                                ]),
+                            ],className="flip-card-back", color="", inverse=False)
+                    ],className="flip-card-inner",), 
+                ],className="flip-card"),
+            
+                ],fluid=True, className='cards'),
             ])
     elif pathname == "/page-1":
         return html.Div([
-            dbc.Row([ 
-                html.H1("Aging project", className="display-4"),
-            ])   
+            dbc.Container([
+                dbc.Row([ 
+                    html.H1("Aging project", className="display-4"),
+                    html.Br(),
+                    html.P("Description: This space will monitor and track the status of ongoing projects for the stream ecology lab. It will include interactive maps, charts, figures and summaries.", className="lead"),
+                    ]),                     
+            ],fluid=True, style={'textAlign': 'left'}),     
         ])
     elif pathname == "/page-2":
         return html.Div([
-            dbc.Row([ 
-                html.H1("USACE", className="display-4"),
-            ])   
+            dbc.Container([
+                dbc.Row([ 
+                    html.H1("USACE project", className="display-4"),
+                    html.Br(),
+                    html.P("Description: This space will monitor and track the status of ongoing projects for the stream ecology lab. It will include interactive maps, charts, figures and summaries.", className="lead"),
+                    ]),                     
+            ],fluid=True, style={'textAlign': 'left'}),     
         ])
     elif pathname == "/page-3":
         return html.Div([
-            dbc.Row([ 
-                html.H1("Summer project", className="display-4"),
-            ])   
+            dbc.Container([
+                dbc.Row([ 
+                    html.H1("Summer project", className="display-4"),
+                    html.Br(),
+                    html.P("Description: This space will monitor and track the status of ongoing projects for the stream ecology lab. It will include interactive maps, charts, figures and summaries.", className="lead"),
+                    ]),                     
+            ],fluid=True, style={'textAlign': 'left'}),     
         ])
     elif pathname == "/page-4":
         return html.Div([
-            dbc.Row([ 
-                html.H1("Zebra mussels", className="display-4"),
-            ])   
+            dbc.Container([
+                dbc.Row([ 
+                    html.H1("Zebra mussels project", className="display-4"),
+                    html.Br(),
+                    html.P("Description: This space will monitor and track the status of ongoing projects for the stream ecology lab. It will include interactive maps, charts, figures and summaries.", className="lead"),
+                    ]),                     
+            ],fluid=True, style={'textAlign': 'left'}),     
         ])
     # If the user tries to reach a different page, return a 404 message
     
