@@ -98,13 +98,13 @@ app.layout = html.Div([dcc.Location(id="url"), sidebar, content])
 def render_page_content(pathname):
     if pathname == "/":
         return html.Div([
+            dbc.Container([
             dbc.Row([ 
                 html.H1("Stream Ecology Project Tracking", className="display-4"),
                 html.Br(),
                 html.P("Description: This space will monitor and track the status of ongoing projects for the stream ecology lab. It will include interactive maps, charts, figures and summaries.", className="lead"),
                 ]),
             html.Br(),
-            dbc.Container([
                 dbc.Row([
                     dbc.Col([
                         dbc.Card([
@@ -136,7 +136,7 @@ def render_page_content(pathname):
                     ],className="flip-card-inner",), 
                 ],className="flip-card"),
                 footer,
-                ],fluid=True, style={'textAlign': 'center'}),
+                ],fluid=True, style={'textAlign': 'left'}),
             ])
     elif pathname == "/page-1":
         return html.Div([
