@@ -14,6 +14,7 @@ import numpy as np
 from datetime import datetime
 
 
+server = flask.Flask(__name__)
 app = dash.Dash(external_stylesheets=[dbc.themes.LITERA])
 
 footer_height = "6rem", "10rem"
