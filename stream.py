@@ -219,7 +219,7 @@ def render_page_content(pathname):
     # If the user tries to reach a different page, return a 404 message
     
 
-server = stream.server
+server = app.server
 if __name__ == "__main__":
-    stream.run_server(debug=True)
+    app.run_server(debug=True)
 
