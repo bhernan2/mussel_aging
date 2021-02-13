@@ -1,1 +1,1 @@
-gunicorn app:app.server -b localhost:8050
+gunicorn -w 3 app:server
