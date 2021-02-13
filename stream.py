@@ -14,8 +14,8 @@ import numpy as np
 from datetime import datetime
 
 
-server = flask.Flask(__name__)
-app = dash.Dash(external_stylesheets=[dbc.themes.LITERA])
+
+app = dash.Dash(__name__, external_stylesheets=[dbc.themes.LITERA])
 
 footer_height = "6rem", "10rem"
 
@@ -219,7 +219,7 @@ def render_page_content(pathname):
     # If the user tries to reach a different page, return a 404 message
     
 
-
+server = stream.server
 if __name__ == "__main__":
-    app.run_server(debug=True)
+    stream.run_server(debug=True)
 
