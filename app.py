@@ -50,7 +50,7 @@ def Dashboard():
     return layout
 
 app = dash.Dash(__name__, external_stylesheets=[dbc.themes.LITERA])
-
+server = app.server
 app.layout = Dashboard()
 
 @app.callback(Output("page-content", "children"), [Input("url", "pathname")])
@@ -174,10 +174,7 @@ def render_page_content(pathname):
                     ]),                     
             ],fluid=True, style={'textAlign': 'left'}),     
         ])
-    # If the user tries to reach a different page, return a 404 message
-    
 
-server = app.server
 if __name__ == "__main__":
     app.run_server(debug=True)
 
