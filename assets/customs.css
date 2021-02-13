@@ -1,15 +1,15 @@
 /* CSS used here will be applied after bootstrap.css */
 .content-style {
-  margin-left: 32rem;
+  margin-left: 20rem;
   margin-right: 2rem;
-  padding: 2rem 1rem;
+  padding: 1rem 1rem;
 }
 .sidebar-style {
   position: fixed;
   top: 0;
   left: 0;
   bottom: 0;
-  width: 15rem;
+  width: 18rem;
   padding: 2rem 1rem;
   background-color: #f8f9fa;
 }
@@ -72,8 +72,8 @@
   .flip-card {
       display: flex;
       background-color: transparent;
-      height: 500px;
-      width: 600px;
+      height: 400px;
+      width: 400px;
       border: 0.5px solid #f1f1f1;
       border-radius: 8px;
       padding: 0rem;
