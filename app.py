@@ -13,58 +13,7 @@ import numpy as np
 
 from datetime import datetime
 
-
-
-app = dash.Dash(__name__, external_stylesheets=[dbc.themes.LITERA])
-
-footer_height = "6rem", "10rem"
-
-# eventually move styles to a different .py file
-# the style arguments for the sidebar. We use position:fixed and a fixed width
-
-
-SIDEBAR_STYLE = {
-    "position": "fixed",
-    "top": 0,
-    "left": 0,
-    "bottom": 0,
-    "width": "30rem",
-    "padding": "2rem 1rem",
-    "background-color": "#f8f9fa",
-}
-
-# the styles for the main content position it to the right of the sidebar and
-# add some padding.
-CONTENT_STYLE = {
-    "margin-left": "32rem",
-    "margin-right": "2rem",
-    "padding": "2rem 1rem",
-}
-
-IMG_STYLE = {
-    # "position": "fixed",
-    #"top": 0,
-    # "left": 0,
-    # "bottom": 0,
-    "position": "absolute",
-    "bottom": "8px",
-    "width": "28rem",
-    "padding": "2rem 2rem",
-
-}
-
-FOOTER_STYLE = {
-    "position": "fixed",
-    "bottom": 0,
-    "left": 0,
-    "right": 0,
-    "height": footer_height,
-    "padding": "1rem 1rem",
-    "background-color": "#232526",
-}
-
-sidebar = html.Div(
-    [
+sidebar = html.Div([
         html.H2("home & projects", className="display-6"),
         html.Hr(),
         dbc.Nav(
@@ -85,15 +34,24 @@ sidebar = html.Div(
             pills=True,
         ),
     ],
-    style=SIDEBAR_STYLE,
+    className='sidebar-style',
 )
 
-content = html.Div(id="page-content", style=CONTENT_STYLE)
+content = html.Div(id="page-content", className='content-style')
 
-footer = html.Footer(id="footer", style=FOOTER_STYLE)
+footer = html.Footer(id="footer", className='footer-style')
 
-app.layout = html.Div([dcc.Location(id="url"), sidebar, content])
+def Dashboard():
+    layout= html.Div([
+    dcc.Location(id="url"), 
+    sidebar, 
+    content,
+    footer])
+    return layout
 
+app = dash.Dash(__name__, external_stylesheets=[dbc.themes.LITERA])
+
+app.layout = Dashboard()
 
 @app.callback(Output("page-content", "children"), [Input("url", "pathname")])
 def render_page_content(pathname):

@@ -1,4 +1,29 @@
 /* CSS used here will be applied after bootstrap.css */
+.content-style {
+  margin-left: 32rem;
+  margin-right: 2rem;
+  padding: 2rem 1rem;
+}
+.sidebar-style {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 30rem;
+  padding: 2rem 1rem;
+  background-color: #f8f9fa;
+}
+
+.footer-style {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 6rem 10rem;
+  padding: 1rem 1rem;
+  background-color: #232526;
+}
+
 .nav-pills .nav-link.active {
     color: black;
     background-color: white;
