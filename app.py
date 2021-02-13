@@ -39,7 +39,7 @@ sidebar = html.Div([
     className='sidebar-style',
 )
 
-content = html.Div(id="page-content", className='content-style')
+content = html.Div(html.Br(),id="page-content", className='content-style')
 
 footer = html.Footer(
     html.P('Copyright © 2021 BAH - All Rights Reserved.'), id="footer", className='footer-style')
@@ -134,8 +134,8 @@ def render_page_content(pathname):
                             ],className="flip-card-back", color="", inverse=False)
                     ],className="flip-card-inner",), 
                 ],className="flip-card"),
-            
-                ],fluid=True, className='cards'),
+            html.Br(),
+            ],fluid=True, className='cards'),
             ])
     elif pathname == "/page-1":
         return html.Div([
