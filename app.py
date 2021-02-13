@@ -1,3 +1,5 @@
+# -*- coding: utf-8 -*-
+
 import dash
 import dash_bootstrap_components as dbc
 import dash_core_components as dcc
@@ -39,7 +41,8 @@ sidebar = html.Div([
 
 content = html.Div(id="page-content", className='content-style')
 
-footer = html.Footer(id="footer", className='footer-style')
+footer = html.Footer(
+    html.P('Copyright © 2021 BAH - All Rights Reserved.'), id="footer", className='footer-style')
 
 def Dashboard():
     layout= html.Div([

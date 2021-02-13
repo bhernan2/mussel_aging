@@ -22,6 +22,8 @@
   height: 6rem 10rem;
   padding: 1rem 1rem;
   background-color: #232526;
+  color: white;
+  text-align: right;
 }
 
 .nav-pills .nav-link.active {
