@@ -66,7 +66,7 @@ def render_page_content(pathname):
                 html.Br(),
                 html.P("Description: This space will monitor and track the status of ongoing projects for the stream ecology lab. It will include interactive maps, charts, figures and summaries.", className="lead"),
                 ]),
-            ],fluid=True ),
+            ],fluid=True, style={'textAlign': 'left'}),
             html.Br(),
             dbc.Container([      
                 dbc.Row([
