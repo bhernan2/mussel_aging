@@ -23,13 +23,17 @@ sidebar = html.Div([
                 html.Br(),
                 dbc.NavLink("Home", href="/", active="exact"),
                 html.Br(),
-                dbc.NavLink("Aging", href="/page-1", active="exact"),
+                dbc.NavLink("Meet the team", href="/page-1", active="exact"),
                 html.Br(),
-                dbc.NavLink("USACE", href="/page-2", active="exact"),
+                dbc.NavLink("Aging", href="/page-2", active="exact"),
                 html.Br(),
-                dbc.NavLink("Summer", href="/page-3", active="exact"),
+                dbc.NavLink("USACE", href="/page-3", active="exact"),
                 html.Br(),
-                dbc.NavLink("Zebra mussels", href="/page-4", active="exact"),
+                dbc.NavLink("Summer", href="/page-4", active="exact"),
+                html.Br(),
+                dbc.NavLink("Zebra mussels", href="/page-5", active="exact"),
+                html.Br(),
+                
                 html.Br(),
                 html.Br(),
                 html.Br(),
@@ -185,7 +189,19 @@ def toggle_modal(n1, n2, is_open):
 def render_page_content(pathname):
     if pathname == "/":
         return homepage
+    
     elif pathname == "/page-1":
+        return html.Div([
+            dbc.Container([
+                dbc.Row([ 
+                    html.H1("Meet the team", className="display-4"),
+                    html.Br(),
+                    # html.P("Description: This space will monitor and track the status of ongoing projects for the stream ecology lab. It will include interactive maps, charts, figures and summaries.", className="lead"),
+                    ]),                     
+            ],fluid=True, style={'textAlign': 'left'}),     
+        ])
+       
+    elif pathname == "/page-2":
         return html.Div([
             dbc.Container([
                 dbc.Row([ 
@@ -199,7 +215,7 @@ def render_page_content(pathname):
                     ]),                    
             ],fluid=True, style={'textAlign': 'left'}),     
         ])
-    elif pathname == "/page-2":
+    elif pathname == "/page-3":
         return html.Div([
             dbc.Container([
                 dbc.Row([ 
@@ -209,7 +225,7 @@ def render_page_content(pathname):
                     ]),                     
             ],fluid=True, style={'textAlign': 'left'}),     
         ])
-    elif pathname == "/page-3":
+    elif pathname == "/page-4":
         return html.Div([
             dbc.Container([
                 dbc.Row([ 
@@ -219,7 +235,7 @@ def render_page_content(pathname):
                     ]),                     
             ],fluid=True, style={'textAlign': 'left'}),     
         ])
-    elif pathname == "/page-4":
+    elif pathname == "/page-5":
         return html.Div([
             dbc.Container([
                 dbc.Row([ 
@@ -229,7 +245,7 @@ def render_page_content(pathname):
                     ]),                     
             ],fluid=True, style={'textAlign': 'left'}),     
         ])
-       
+    
 
 if __name__ == "__main__":
     app.run_server(debug=True)
