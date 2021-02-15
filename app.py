@@ -30,14 +30,15 @@ sidebar = html.Div([
                 dbc.NavLink("Summer", href="/page-3", active="exact"),
                 html.Br(),
                 dbc.NavLink("Zebra mussels", href="/page-4", active="exact"),
-                # html.Img(src='assets/mussel_foot.jpg', style=IMG_STYLE)
-                 #modal for any TXState Alerts
                 html.Br(),
+                html.Br(),
+                html.Br(),
+                #modal for any TXState Alerts
                 dbc.Container([
                     dbc.Row([
                         html.H5("TX State Alert"),  
                             ],justify="center"),
-                        dbc.Button("Open", id='open-center', color="light", size='lg',),        
+                        dbc.Button("Open", id='open-center', color="warning", size='lg',),        
                             html.Br(),
                             dbc.Row([
                                 dbc.Modal([
@@ -51,12 +52,12 @@ sidebar = html.Div([
                                         ]),
                                     ]),
                                 dbc.ModalFooter(
-                                dbc.Button("Close", id="close-center", size="lg")
+                                dbc.Button("Close", id="close-center", size="xl")
                                 ),
                             ],
                             id="modal-center",
                             centered=True,
-                            size="xl",
+                            size="lg",
                             ),
                             ]),
                         
