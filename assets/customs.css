@@ -5,12 +5,12 @@
   padding: 1rem 1rem;
 }
 .sidebar-style {
-  position: fixed;
+  position: relative;
   top: 0;
   left: 0;
   bottom: 0;
   width: 18rem;
-  padding: 4rem 4rem;
+  padding: 2rem 1rem;
   background-color: #f8f9fa;
 }
 
