@@ -24,7 +24,7 @@ sidebar = html.Div([
                 html.Br(),
                 dbc.NavLink("Home", href="/", active="exact"),
                 html.Br(),
-                dbc.NavLink("Meet the team", href="/page-1", active="exact"),
+                dbc.NavLink("Meet the lab", href="/page-1", active="exact"),
                 html.Br(),
                 dbc.NavLink("Aging", href="/page-2", active="exact"),
                 html.Br(),
@@ -198,7 +198,7 @@ def render_page_content(pathname):
         return html.Div([
             dbc.Container([
                 dbc.Row([ 
-                    html.H1("Meet the team", className="display-4"),
+                    html.H1("Meet the lab members", className="display-4"),
                     html.Br(),
                     # html.P("Description: This space will monitor and track the status of ongoing projects for the stream ecology lab. It will include interactive maps, charts, figures and summaries.", className="lead"),
                     ]),                     
