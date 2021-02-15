@@ -44,8 +44,10 @@ sidebar = html.Div([
                     dbc.Row([
                         html.H5("TX State Alert"),  
                             ],justify="center"),
-                        dbc.Button("Open", id='open-center', color="danger", className="mr-1", size="lg"),        
-                            html.Br(),
+                        dbc.Row([
+                        dbc.Button("Open", id='open-center', color="danger", className="mr-1", size="lg"),
+                        ], justify="center"),  
+                    html.Br(),
                             dbc.Row([
                                 dbc.Modal([
                                 dbc.ModalHeader("Alert"),
@@ -156,18 +158,18 @@ homepage = html.Div([
                     ],className="flip-card-inner",), 
                 ],className="flip-card"),
             html.Br(),
-            # html.Footer(
-            #     html.P('Copyright © 2021 BAH - All Rights Reserved.'), id="footer", className='footer-style'),
             ],fluid=True, className='cards'),
         ])
-
+footer = html.Div([
+    html.Footer( html.P('Copyright © 2021 BAH - All Rights Reserved.'), id="footer", className='footer-style'),
+    ])
 
 def Dashboard():
     layout= html.Div([
     dcc.Location(id="url"), 
     sidebar, 
     content,
-    #footer])
+    footer
     ])
     return layout
 
