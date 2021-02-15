@@ -33,12 +33,13 @@ sidebar = html.Div([
                 html.Br(),
                 html.Br(),
                 html.Br(),
+                html.Br(),
                 #modal for any TXState Alerts
                 dbc.Container([
                     dbc.Row([
                         html.H5("TX State Alert"),  
                             ],justify="center"),
-                        dbc.Button("Open", id='open-center', color="warning", size='lg',),        
+                        dbc.Button("Open", id='open-center', color="danger", className="mr-1", size="lg"),        
                             html.Br(),
                             dbc.Row([
                                 dbc.Modal([
@@ -52,7 +53,7 @@ sidebar = html.Div([
                                         ]),
                                     ]),
                                 dbc.ModalFooter(
-                                dbc.Button("Close", id="close-center", size="xl")
+                                dbc.Button("Close", id="close-center")
                                 ),
                             ],
                             id="modal-center",
