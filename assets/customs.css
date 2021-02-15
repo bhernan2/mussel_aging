@@ -29,6 +29,7 @@
 .nav-pills .nav-link.active {
     color: black;
     background-color: white;
+    outline-color: black;
     font-size: 18px;
 }
 

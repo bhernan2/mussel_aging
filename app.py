@@ -15,6 +15,7 @@ import numpy as np
 
 from datetime import datetime
 
+#sidebar 
 sidebar = html.Div([
         html.H2("home & projects", className="display-6"),
         html.Hr(),
@@ -67,6 +68,7 @@ sidebar = html.Div([
                             ]),
                         
                     ], id="modal-style" ,fluid=True),
+                #turn modal off when there is not an annoucement 
             ],
             vertical=True,
             pills=True,
@@ -74,7 +76,10 @@ sidebar = html.Div([
     ],
     className='sidebar-style',
 )
+#content for pages adjacent to sidebar
 content = html.Div(html.Br(), id="page-content", className='content-style')
+
+#homepage
 homepage = html.Div([
             dbc.Container([
             dbc.Row([ 
@@ -151,13 +156,10 @@ homepage = html.Div([
                     ],className="flip-card-inner",), 
                 ],className="flip-card"),
             html.Br(),
-            html.Footer(
-                html.P('Copyright © 2021 BAH - All Rights Reserved.'), id="footer", className='footer-style'),
+            # html.Footer(
+            #     html.P('Copyright © 2021 BAH - All Rights Reserved.'), id="footer", className='footer-style'),
             ],fluid=True, className='cards'),
         ])
-
-
-
 
 
 def Dashboard():
