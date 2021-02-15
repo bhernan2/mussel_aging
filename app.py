@@ -147,13 +147,14 @@ homepage = html.Div([
                     ],className="flip-card-inner",), 
                 ],className="flip-card"),
             html.Br(),
+            html.Footer(
+                html.P('Copyright © 2021 BAH - All Rights Reserved.'), id="footer", className='footer-style'),
             ],fluid=True, className='cards'),
         ])
 
 
 
-footer = html.Footer(
-    html.P('Copyright © 2021 BAH - All Rights Reserved.'), id="footer", className='footer-style')
+
 
 def Dashboard():
     layout= html.Div([

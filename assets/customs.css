@@ -14,21 +14,15 @@
   background-color: #f8f9fa;
 }
 
-.modal-style {
-  vertical-align: bottom;
-}
-
 .footer-style {
   position: fixed;
   bottom: 0;
   left: 0;
   right: 0;
-  height: 2rem 1rem;
-  padding: 1rem 1rem;
   background-color: #232526;
   color: white;
   text-align: right;
-  font-size: 12px;
+  font-size: 10px;
   font-family: 'Courier New', Courier, monospace;
 }
 
