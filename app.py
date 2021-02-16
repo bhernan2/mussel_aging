@@ -57,7 +57,7 @@ sidebar = html.Div([
                                     dbc.Card([
                                         # dbc.CardImg(src='assets/_alert.png'),
                                         dbc.CardBody([
-                                            html.P("TXState Alert- San Marcos and Round Rock campuses - There is a major winter storm and dangerously cold temperatures anticipated from today through the middle of the week.  Travel conditions are hazardous and very difficult.  Conditions will include ice and snow and reduced visibility.  Power outages are possible due to windy conditions, potential ice accumulation on lines, and a prolonged period of cold temperatures.  Life threatening wind chill temperatures are expected.  Texas State University will be closed through Wednesday, February 17, at 8:00 AM.", className="lead"),
+                                            html.P("Texas State University will be closed through 8 a.m. Saturday, February 20 due to inclement weather and continued power outages which have impacted multiple university systems, including phone lines and computer networks. All classes and events are canceled, including virtual/online classes and events. University offices will remain closed. Only designated critical personnel should report to work on the campuses.", className="lead"),
                                             ]),
                                         ]),
                                     ]),
@@ -222,7 +222,7 @@ def Dashboard():
     ])
     return layout
 
-app = dash.Dash(__name__, external_stylesheets=[dbc.themes.LITERA])
+app = dash.Dash(__name__, suppress_callback_exceptions=True, external_stylesheets=[dbc.themes.LITERA])
 server = app.server
 app.layout = Dashboard()
 
@@ -288,6 +288,49 @@ def render_page_content(pathname):
             ],fluid=True, style={'textAlign': 'left'}),     
         ])
     
+#dropdown figures callbacks
+@app.callback(
+    dash.dependencies.Output('dd-output-container', 'children'),
+    [dash.dependencies.Input('aging-dropdown', 'value')])
+def update_plot(value):
+    if value == "plot2-info":
+        return html.Div([
+            dbc.Row([
+                    dbc.Col([
+                        dcc.Graph(
+                            figure = aging_boxplot(),
+                            id='plot2', 
+                            config={
+                                'displayModeBar': False, 
+                                'responsive': True, 
+                                'autosizable':True,
+                                #'fillFrame':True 
+                                },
+                            style={'display': 'inline-block', 'vertical-align': 'middle'}),                      
+                        ],), #width={"sm": 12, "md": {"size": 6, "order": 1}, "lg":4},),
+            ])
+        ])
+    elif value == 'plot1-info':
+        return html.Div([
+            dbc.Row([
+                    dbc.Col([
+                        html.H6('L. teres'),
+                        dcc.Graph(
+                            #figure = ,
+                            id='plot1', 
+                            config={
+                                'displayModeBar': False, 
+                                'responsive': True, 
+                                #'autosizable':True,
+                                #'fillFrame':True 
+                                },
+                            style={'display': 'inline-block', 'vertical-align': 'middle'}),                      
+                        ], width={"sm": 12, "md": {"size": 6, "order": 1}, "lg":4},),
+            ])
+        ])
+        
+       
+
 
 if __name__ == "__main__":
     app.run_server(debug=True)
