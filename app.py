@@ -306,7 +306,7 @@ def update_plot(value):
                                 'autosizable':True,
                                 #'fillFrame':True 
                                 },
-                            style={'display': 'inline-block', 'vertical-align': 'middle'}),                      
+                            style={'display': 'inline-block', 'vertical-align': 'left'}),                      
                         ],), #width={"sm": 12, "md": {"size": 6, "order": 1}, "lg":4},),
             ])
         ])
