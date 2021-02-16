@@ -15,6 +15,8 @@ import numpy as np
 
 from datetime import datetime
 
+from figures import aging_boxplot
+
 #sidebar 
 sidebar = html.Div([
         html.H2("home & projects", className="display-6"),
@@ -160,9 +162,56 @@ homepage = html.Div([
             html.Br(),
             ],fluid=True, className='cards'),
         ])
+
+#dropdown jumbo
+dropdown = html.Div([
+    html.Br(),
+    dbc.Row([
+        html.H3("Explore the data", className='text-center', ),
+        ]),
+    dbc.Row([
+        dcc.Dropdown(
+            id='aging-dropdown', 
+            clearable=False,
+            style={'backgroundColor': '#fffff', 'color':'black', 'width': '100%'},
+            options=[
+                    {'label': 'Histogram', 'value': 'plot1-info'},
+                    {'label': 'Boxplot', 'value': 'plot2-info'},
+                    {'label': 'Linear regression', 'value': 'plot3-info'},       
+                    ],
+            placeholder='Select a figure'
+                )
+        ], className="mb-3"),
+    dbc.Row(id='dd-output-container'),
+])
+
+aging = html.Div([
+            dbc.Container([
+                dbc.Row([ 
+                    html.H1("Aging project", className="display-4"),
+                    html.Br(),
+                    html.P("Description: This space will monitor and track the status of ongoing projects for the stream ecology lab. It will include interactive maps, charts, figures and summaries.", className="lead"),
+                    ]), 
+                    html.Br(),
+                dbc.Row([
+                    html.P("Project info: a few sentences explaining project", className="lead")
+                    ]),  
+                html.Br(),
+                dbc.Row([
+                    #include drowdown for figures
+                    dbc.Col([
+                        dropdown
+                    ],width=6),
+                    dbc.Col(width=6),
+                ]),                     
+            ],fluid=True, style={'textAlign': 'left'}),     
+        ])
+
 footer = html.Div([
     html.Footer( html.P('Copyright © 2021 BAH - All Rights Reserved.'), id="footer", className='footer-style'),
     ])
+
+
 
 def Dashboard():
     layout= html.Div([
@@ -206,19 +255,8 @@ def render_page_content(pathname):
         ])
        
     elif pathname == "/page-2":
-        return html.Div([
-            dbc.Container([
-                dbc.Row([ 
-                    html.H1("Aging project", className="display-4"),
-                    html.Br(),
-                    html.P("Description: This space will monitor and track the status of ongoing projects for the stream ecology lab. It will include interactive maps, charts, figures and summaries.", className="lead"),
-                    ]), 
-                    html.Br(),
-                dbc.Row([
-                    html.P("Project info: ", className="lead")
-                    ]),                    
-            ],fluid=True, style={'textAlign': 'left'}),     
-        ])
+        return aging
+
     elif pathname == "/page-3":
         return html.Div([
             dbc.Container([
