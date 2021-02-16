@@ -12,9 +12,8 @@ def aging_boxplot():
             y="value", 
             color="variable",
             boxmode="overlay",
-            title="L. teres",
-            # xaxis_title="Agers",
-            # yaxis_title="Age", 
+            title='<i>L. teres</i>',
+            labels = {'variable': 'Agers', 'value':'Age'},
             points='all')
 
     return fig
