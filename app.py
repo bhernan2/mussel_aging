@@ -310,24 +310,24 @@ def update_plot(value):
                         ],), #width={"sm": 12, "md": {"size": 6, "order": 1}, "lg":4},),
             ])
         ])
-    elif value == 'plot1-info':
-        return html.Div([
-            dbc.Row([
-                    dbc.Col([
-                        html.H6('L. teres'),
-                        dcc.Graph(
-                            #figure = ,
-                            id='plot1', 
-                            config={
-                                'displayModeBar': False, 
-                                'responsive': True, 
-                                #'autosizable':True,
-                                #'fillFrame':True 
-                                },
-                            style={'display': 'inline-block', 'vertical-align': 'middle'}),                      
-                        ], width={"sm": 12, "md": {"size": 6, "order": 1}, "lg":4},),
-            ])
-        ])
+    # elif value == 'plot1-info':
+    #     return html.Div([
+    #         dbc.Row([
+    #                 dbc.Col([
+    #                     html.H6('L. teres'),
+    #                     dcc.Graph(
+    #                         #figure = ,
+    #                         id='plot1', 
+    #                         config={
+    #                             'displayModeBar': False, 
+    #                             'responsive': True, 
+    #                             #'autosizable':True,
+    #                             #'fillFrame':True 
+    #                             },
+    #                         style={'display': 'inline-block', 'vertical-align': 'middle'}),                      
+    #                     ], width={"sm": 12, "md": {"size": 6, "order": 1}, "lg":4},),
+    #         ])
+    #     ])
         
        
 
