@@ -305,7 +305,8 @@ def update_plot(value):
                                 'autosizable':True,
                                 #'fillFrame':True 
                                 },
-                            style={'display': 'inline-block', 'vertical-align': 'center', 'horizontal-align':'center'},),                      
+                            style={'display': 'flex', 'vertical-direction': 'column',},),
+                            #{ display: flex; flex-direction: column; }                      
                         ], align="center",),
                         #width={"sm": 12, "md": {"size": 12, "order": 6}, "lg":12},           
         ])
