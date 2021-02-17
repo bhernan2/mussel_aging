@@ -177,7 +177,8 @@ dropdown = html.Div([
             options=[
                     {'label': 'Histogram', 'value': 'plot1-info'},
                     {'label': 'Boxplot', 'value': 'plot2-info'},
-                    {'label': 'Linear regression', 'value': 'plot3-info'},       
+                    {'label': 'Linear regression', 'value': 'plot3-info'},
+                    {'label': 'Analysis', 'value': 'plot4-info'},       
                     ],
             placeholder='Select a figure'
                 )
@@ -328,7 +329,42 @@ def update_plot(value):
     #                     ], width={"sm": 12, "md": {"size": 6, "order": 1}, "lg":4},),
     #         ])
     #     ])
-        
+    # elif value == 'plot3-info':
+    #     return html.Div([
+    #         dbc.Row([
+    #                 dbc.Col([
+    #                     html.H6('L. teres'),
+    #                     dcc.Graph(
+    #                         #figure = ,
+    #                         id='plot3', 
+    #                         config={
+    #                             'displayModeBar': False, 
+    #                             'responsive': True, 
+    #                             #'autosizable':True,
+    #                             #'fillFrame':True 
+    #                             },
+    #                         style={'display': 'inline-block', 'vertical-align': 'middle'}),                      
+    #                     ], width={"sm": 12, "md": {"size": 6, "order": 1}, "lg":4},),
+    #         ])
+    #     ])
+    # elif value == 'plot4info':
+    #     return html.Div([
+    #         dbc.Row([
+    #                 dbc.Col([
+    #                     html.H6('L. teres'),
+    #                     dcc.Graph(
+    #                         #figure = ,
+    #                         id='plot4', 
+    #                         config={
+    #                             'displayModeBar': False, 
+    #                             'responsive': True, 
+    #                             #'autosizable':True,
+    #                             #'fillFrame':True 
+    #                             },
+    #                         style={'display': 'inline-block', 'vertical-align': 'middle'}),                      
+    #                     ], width={"sm": 12, "md": {"size": 6, "order": 1}, "lg":4},),
+    #         ])
+    #     ])
        
 
 
