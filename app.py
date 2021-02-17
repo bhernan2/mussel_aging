@@ -202,8 +202,8 @@ aging = html.Div([
                     #include drowdown for figures
                     dbc.Col([
                         dropdown
-                    ],width=12),
-                ], justify="center"),                     
+                        ]),
+                    ]),                     
             ],fluid=True, style={'textAlign': 'left'}),     
         ])
 
@@ -295,7 +295,6 @@ def render_page_content(pathname):
 def update_plot(value):
     if value == "plot2-info":
         return html.Div([
-            dbc.Row([
                     dbc.Col([
                         dcc.Graph(
                             figure = aging_boxplot(),
@@ -307,9 +306,8 @@ def update_plot(value):
                                 #'fillFrame':True 
                                 },
                             style={'display': 'inline-block', 'vertical-align': 'center', 'horizontal-align':'center'},),                      
-                        ], align="center", width={"sm": 11, "md": {"size": 11, "order": 2}, "lg":11},),
-                    
-            ],),
+                        ], align="center",),
+                        #width={"sm": 12, "md": {"size": 12, "order": 6}, "lg":12},           
         ])
     # elif value == 'plot1-info':
     #     return html.Div([
