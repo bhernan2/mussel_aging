@@ -180,10 +180,10 @@ dropdown = html.Div([
                     {'label': 'Linear regression', 'value': 'plot3-info'},
                     {'label': 'Analysis', 'value': 'plot4-info'},       
                     ],
-            placeholder='Select a figure'
+            placeholder='Select'
                 )
-        ], className="mb-3"),
-    dbc.Row(id='dd-output-container'),
+        ],justify="center"),
+    dbc.Row(id='dd-output-container', justify="center"),
 ])
 
 aging = html.Div([
@@ -203,7 +203,7 @@ aging = html.Div([
                     dbc.Col([
                         dropdown
                     ],width=12),
-                ]),                     
+                ], justify="center"),                     
             ],fluid=True, style={'textAlign': 'left'}),     
         ])
 
@@ -306,9 +306,10 @@ def update_plot(value):
                                 'autosizable':True,
                                 #'fillFrame':True 
                                 },
-                            style={'display': 'inline-block', 'vertical-align': 'center'},),                      
-                        ], align="center", width={"sm": 12, "md": {"size": 12, "order": 1}, "lg":12},),
-            ], justify="center")
+                            style={'display': 'inline-block', 'vertical-align': 'center', 'horizontal-align':'center'},),                      
+                        ], align="center",),
+              #width={"sm": 12, "md": {"size": 12, "order": 2}, "lg":12},      
+            ],),
         ])
     # elif value == 'plot1-info':
     #     return html.Div([
