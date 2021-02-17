@@ -14,7 +14,9 @@ def aging_boxplot():
             boxmode="overlay",
             title='<i>L. teres</i>',
             labels = {'variable': 'Agers', 'value':'Age'},
-            points='all')
+            points='all',
+            color_discrete_sequence=["#601A4A", "#EE442F", "#63ACBE"],
+            )
 
     return fig
 
