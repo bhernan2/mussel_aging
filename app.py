@@ -202,8 +202,7 @@ aging = html.Div([
                     #include drowdown for figures
                     dbc.Col([
                         dropdown
-                    ],width=6),
-                    dbc.Col(width=6),
+                    ],width=12),
                 ]),                     
             ],fluid=True, style={'textAlign': 'left'}),     
         ])
@@ -307,9 +306,9 @@ def update_plot(value):
                                 'autosizable':True,
                                 #'fillFrame':True 
                                 },
-                            style={'display': 'inline-block', 'vertical-align': 'left'}),                      
-                        ],), #width={"sm": 12, "md": {"size": 6, "order": 1}, "lg":4},),
-            ])
+                            style={'display': 'inline-block', 'vertical-align': 'center'},),                      
+                        ],width=6, align="center",), #width={"sm": 12, "md": {"size": 6, "order": 1}, "lg":4},),
+            ], justify="center")
         ])
     # elif value == 'plot1-info':
     #     return html.Div([
