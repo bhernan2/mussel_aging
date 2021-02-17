@@ -307,7 +307,7 @@ def update_plot(value):
                                 #'fillFrame':True 
                                 },
                             style={'display': 'inline-block', 'vertical-align': 'center'},),                      
-                        ],width=6, align="center",), #width={"sm": 12, "md": {"size": 6, "order": 1}, "lg":4},),
+                        ], align="center", width={"sm": 12, "md": {"size": 12, "order": 1}, "lg":12},),
             ], justify="center")
         ])
     # elif value == 'plot1-info':
