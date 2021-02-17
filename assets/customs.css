@@ -13,8 +13,8 @@
   bottom: 0;
   height: 100%; */
   width: 18rem;
-  margin-bottom: -1000px; /* any large number will do */
-  padding-bottom: 1000px; 
+  margin-bottom: -500px; /* any large number will do */
+  padding-bottom: 500px; 
   background-color: #f8f9fa;
   overflow-y: scroll;
 }
