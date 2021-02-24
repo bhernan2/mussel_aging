@@ -394,7 +394,7 @@ def update_plot(value):
                         html.Br(),
                         html.P('ANOVA', className='lead'),
                         html.Br(),
-                        zebra_burrow_table1,
+                        # zebra_burrow_table1,
                     ], align='top', width=6),
             ]), 
             dbc.Row([
@@ -414,7 +414,7 @@ def update_plot(value):
                         ], align="start", width = 6, className='column_left'),
                     dbc.Col([
                         html.P("Tukey HSD", className="lead"),
-                        zebra_burrow_table2,
+                        # zebra_burrow_table2,
                     ], align='top', width=6),
                         #width={"sm": 12, "md": {"size": 6, "order": 3}, "lg":6},
             ], className="row_top"),   
