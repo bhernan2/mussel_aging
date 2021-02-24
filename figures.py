@@ -8,7 +8,7 @@ rename_melt =  pd.read_csv("agers_melt.csv")
 df_rename = pd.read_csv("zebra_mussels/burrow_zebra.csv")
 
 def aging_boxplot():
-    fig = px.box(rename_melt, 
+        fig = px.box(rename_melt, 
             x="variable", 
             y="value", 
             color="variable",
@@ -18,8 +18,8 @@ def aging_boxplot():
             points='all',
             color_discrete_sequence=["#601A4A", "#EE442F", "#63ACBE"],
             )
-
-    return fig
+        fig.update_layout(height=700, width=900,)
+        return fig
 
 def zebra_burrow_scatter():
         fig = make_subplots(rows=3, cols=4,subplot_titles=("T1", "T2", "T3", "T4", "T5", "T6", "T7","T8","T9", "T10", "T11", "T12"))

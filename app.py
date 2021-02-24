@@ -175,10 +175,10 @@ dropdown = html.Div([
             clearable=False,
             style={'backgroundColor': '#fffff', 'color':'black', 'width': '100%'},
             options=[
-                    {'label': 'Histogram', 'value': 'plot1-info'},
+                    # {'label': 'Histogram', 'value': 'plot1-info'},
                     {'label': 'Boxplot', 'value': 'plot2-info'},
-                    {'label': 'Linear regression', 'value': 'plot3-info'},
-                    {'label': 'Analysis', 'value': 'plot4-info'},       
+                    # {'label': 'Linear regression', 'value': 'plot3-info'},
+                    # {'label': 'Analysis', 'value': 'plot4-info'},       
                     ],
             placeholder='Select'
                 )
