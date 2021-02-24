@@ -347,6 +347,8 @@ def update_plot(value):
         return html.Div([
             dbc.Row([
                     dbc.Col([
+                        html.Br(),
+                        html.P('Counts of A. plicata mussels burrowed at ~90% by tanks across days', className='lead'),
                         dcc.Graph(
                             figure = zebra_burrow_scatter(),
                             id='plot1', 
@@ -358,11 +360,16 @@ def update_plot(value):
                                 },
                             style={'display': 'flex', 'vertical-direction': 'column',},),
                             #{ display: flex; flex-direction: column; }                      
-                        ], align="center",),
+                        ], align="center", width=8),
                         #width={"sm": 12, "md": {"size": 12, "order": 6}, "lg":12},
+                    dbc.Col([
+                        html.Br(),
+                        html.P('ANOVA', className='lead')
+                    ], align='top'),
             ]), 
             dbc.Row([
                     dbc.Col([
+                        html.P('Boxplots of A. plicata control (no zebra mussels) and treatment (zebra mussels present & zebra mussels attached) tanks. The ends of the box represent the lower and upper quartiles, while the median (second quartile) is marked by a line inside the box.', className='lead'),
                         dcc.Graph(
                             figure = zebra_burrow_boxplot(),
                             id='plot2', 
@@ -374,9 +381,12 @@ def update_plot(value):
                                 },
                             style={'display': 'flex', 'vertical-direction': 'column',},),
                             #{ display: flex; flex-direction: column; }                      
-                        ], align="center",),
+                        ], align="center", width = 8),
+                    dbc.Col([
+                        html.P("Tukey HSD", className="lead")
+                    ], align='top', width=4),
                         #width={"sm": 12, "md": {"size": 12, "order": 6}, "lg":12},
-            ]),                     
+            ]),   
         ])
     # elif value == 'plot1-info':
     #     return html.Div([

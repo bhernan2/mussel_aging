@@ -13,7 +13,7 @@ def aging_boxplot():
             y="value", 
             color="variable",
             boxmode="overlay",
-            title='<i>L. teres</i>',
+        #     title='<i>L. teres</i>',
             labels = {'variable': 'Agers', 'value':'Age'},
             points='all',
             color_discrete_sequence=["#601A4A", "#EE442F", "#63ACBE"],
@@ -61,8 +61,8 @@ def zebra_burrow_scatter():
               row=3, col=4)
 
 
-        fig.update_layout(height=700, width=900,
-                  title_text="Counts of mussels burrowed ~90% by tanks across days",
+        fig.update_layout(height=700, width=1000,
+                #   title_text="Counts of mussels burrowed ~90% by tanks across days",
                   showlegend=False)
         return fig
 def zebra_burrow_boxplot():
@@ -71,7 +71,7 @@ def zebra_burrow_boxplot():
             y="value", 
             color="type",
             boxmode="overlay",
-            title='Boxplots of control and treatment (zebra mussels present & zebra mussels attached) tanks. <br>The ends of the box represent the lower and upper quartiles, while the median (second <br>quartile) is marked by a line inside the box.<br><br>',
+        #     title='Boxplots of control and treatment (zebra mussels present & zebra mussels attached) tanks. <br>The ends of the box represent the lower and upper quartiles, while the median (second <br>quartile) is marked by a line inside the box.<br><br>',
             labels = {'type': 'Type', 'value':'Count'},
             points='all',
             color_discrete_sequence=["#601A4A", "#EE442F", "#63ACBE"],
