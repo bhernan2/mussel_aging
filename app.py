@@ -251,7 +251,7 @@ table_header = [
 row1 = html.Tr([html.Td("C(type)"), html.Td("2.0"), html.Td("632.838889"), html.Td("316.419444"),html.Td("262.279841"),html.Td("8.391599e-71"), ])
 row2 = html.Tr([html.Td("Residual"), html.Td("357.0"),html.Td("430.691667"), html.Td("1.206419"),html.Td(""),html.Td("")])
 table_body = [html.Tbody([row1, row2])]
-zebra_burrow_table1 = dbc.Table(table_header + table_body, bordered=True, size="md") 
+zebra_burrow_table1 = dbc.Table(table_header + table_body, bordered=True, size="sm") 
 #footer
 footer = html.Div([
     html.Footer( html.P('Copyright © 2021 BAH - All Rights Reserved.'), id="footer", className='footer-style'),
