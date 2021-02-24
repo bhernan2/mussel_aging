@@ -186,6 +186,26 @@ dropdown = html.Div([
     dbc.Row(id='dd-output-container', justify="center"),
 ])
 
+#dropdown jumbo
+dropdown2 = html.Div([
+    html.Br(),
+    dbc.Row([
+        html.H3("Explore projects", className='text-center', ),
+        ]),
+    dbc.Row([
+        dcc.Dropdown(
+            id='zebra-dropdown', 
+            clearable=False,
+            style={'backgroundColor': '#fffff', 'color':'black', 'width': '100%'},
+            options=[
+                    {'label': 'Burrowing', 'value': 'plot1-info'},       
+                    ],
+            placeholder='Select a project'
+                )
+        ],justify="center"),
+    dbc.Row(id='dd-output-container2', justify="center"),
+])
+
 aging = html.Div([
             dbc.Container([
                 dbc.Row([ 
@@ -195,7 +215,7 @@ aging = html.Div([
                     ]), 
                     html.Br(),
                 dbc.Row([
-                    html.P("Project info: a few sentences explaining project", className="lead")
+                    html.P("Project info: a few sentences explaining projects", className="lead")
                     ]),  
                 html.Br(),
                 dbc.Row([
@@ -212,10 +232,15 @@ zebra = html.Div([
                     html.H1("Zebra mussels project", className="display-4"),
                     html.Br(),
                     html.P("Description: This space will monitor and track the status of ongoing projects for the stream ecology lab. It will include interactive maps, charts, figures and summaries.", className="lead"),
-                    ]),  
+                    ]),
+                    html.Br(),
                 dbc.Row([
-                    dcc.Graph(figure = zebra_burrow_scatter(),),
-                ], justify="center")                   
+                    html.P("Project info: a few sentences explaining projects", className="lead")
+                    ]), 
+                html.Br(),   
+                dbc.Row([
+                    dbc.Col([dropdown2,]),    
+                ]),                   
             ],fluid=True, style={'textAlign': 'left'}),     
         ])
     
@@ -291,7 +316,7 @@ def render_page_content(pathname):
         ])
     elif pathname == "/page-5":
         return zebra
-#dropdown figures callbacks
+#aging dropdown figures callbacks
 @app.callback(
     dash.dependencies.Output('dd-output-container', 'children'),
     [dash.dependencies.Input('aging-dropdown', 'value')])
@@ -302,6 +327,28 @@ def update_plot(value):
                         dcc.Graph(
                             figure = aging_boxplot(),
                             id='plot2', 
+                            config={
+                                'displayModeBar': False, 
+                                'responsive': True, 
+                                'autosizable':True,
+                                #'fillFrame':True 
+                                },
+                            style={'display': 'flex', 'vertical-direction': 'column',},),
+                            #{ display: flex; flex-direction: column; }                      
+                        ], align="center",),
+                        #width={"sm": 12, "md": {"size": 12, "order": 6}, "lg":12},           
+        ])
+#zebra dropdown figures callbacks
+@app.callback(
+    dash.dependencies.Output('dd-output-container2', 'children'),
+    [dash.dependencies.Input('zebra-dropdown', 'value')])
+def update_plot(value):
+    if value == "plot1-info":
+        return html.Div([
+                    dbc.Col([
+                        dcc.Graph(
+                            figure = zebra_burrow_scatter(),
+                            id='plot1', 
                             config={
                                 'displayModeBar': False, 
                                 'responsive': True, 
