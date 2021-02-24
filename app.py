@@ -369,14 +369,14 @@ def update_plot(value):
                                 },
                             style={'display': 'flex', 'vertical-direction': 'column',},),
                             #{ display: flex; flex-direction: column; }                      
-                        ], align="center", width=6),
+                        ], align="start", width=6, className='column_left'),
                         #width={"sm": 12, "md": {"size": 12, "order": 6}, "lg":12},
                     dbc.Col([
                         html.Br(),
                         html.P('ANOVA', className='lead'),
                         html.Br(),
                         zebra_burrow_table1,
-                    ], align='center', width=6),
+                    ], align='top', width=6),
             ]), 
             dbc.Row([
                     dbc.Col([
@@ -392,12 +392,12 @@ def update_plot(value):
                                 },
                             style={'display': 'flex', 'vertical-direction': 'column',},),
                             #{ display: flex; flex-direction: column; }                      
-                        ], align="center", width = 6),
+                        ], align="start", width = 6, className='column_left'),
                     dbc.Col([
                         html.P("Tukey HSD", className="lead")
-                    ], align='center', width=6),
+                    ], align='top', width=6),
                         #width={"sm": 12, "md": {"size": 6, "order": 3}, "lg":6},
-            ]),   
+            ], className="row_top"),   
         ])
     # elif value == 'plot1-info':
     #     return html.Div([

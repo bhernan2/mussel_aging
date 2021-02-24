@@ -23,6 +23,13 @@
     position: 'relative';
 }
 
+.column_left {
+  border-right: 1px solid dimgray;
+}
+.row_top {
+  border-top: 1px solid dimgrey
+}
+
 .footer-style {
   position: fixed;
   bottom: 0;
