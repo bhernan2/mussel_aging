@@ -348,7 +348,7 @@ def update_plot(value):
             dbc.Row([
                     dbc.Col([
                         html.Br(),
-                        html.P('Counts of A. plicata mussels burrowed at ~90% by tanks (T1 ... T12) across days', className='lead'),
+                        html.P('Counts of A. plicata mussels burrowed at ~90% by tanks (T1 ... T12) across days.', className='lead'),
                         dcc.Graph(
                             figure = zebra_burrow_scatter(),
                             id='plot1', 
@@ -360,12 +360,12 @@ def update_plot(value):
                                 },
                             style={'display': 'flex', 'vertical-direction': 'column',},),
                             #{ display: flex; flex-direction: column; }                      
-                        ], align="center", width=8),
+                        ], align="center", width=7),
                         #width={"sm": 12, "md": {"size": 12, "order": 6}, "lg":12},
                     dbc.Col([
                         html.Br(),
                         html.P('ANOVA', className='lead')
-                    ], align='top'),
+                    ], align='top', width=5),
             ]), 
             dbc.Row([
                     dbc.Col([
@@ -381,10 +381,10 @@ def update_plot(value):
                                 },
                             style={'display': 'flex', 'vertical-direction': 'column',},),
                             #{ display: flex; flex-direction: column; }                      
-                        ], align="center", width = 8),
+                        ], align="center", width = 7),
                     dbc.Col([
                         html.P("Tukey HSD", className="lead")
-                    ], align='top', width=4),
+                    ], align='top', width=5),
                         #width={"sm": 12, "md": {"size": 12, "order": 6}, "lg":12},
             ]),   
         ])
