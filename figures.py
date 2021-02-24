@@ -61,7 +61,7 @@ def zebra_burrow_scatter():
               row=3, col=4)
 
 
-        fig.update_layout(height=700, width=1000,
+        fig.update_layout(height=700, width=700,
                 #   title_text="Counts of mussels burrowed ~90% by tanks across days",
                   showlegend=False)
         return fig
@@ -77,7 +77,7 @@ def zebra_burrow_boxplot():
             color_discrete_sequence=["#601A4A", "#EE442F", "#63ACBE"],
             )
         fig.update_layout(height=700, 
-                          width=900,
+                          width=700,
                         )
         return fig
 
