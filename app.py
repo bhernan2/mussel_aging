@@ -248,14 +248,33 @@ zebra = html.Div([
 table_header = [
     html.Thead(html.Tr([html.Th(""),html.Th("df"), html.Th("sum_sq"), html.Th("mean_sq"), html.Th("F"), html.Th("PR(>F)")]))
 ]
-row1 = html.Tr([html.Td("C(type)"), html.Td("2.0"), html.Td("632.838889"), html.Td("316.419444"),html.Td("262.279841"),html.Td("8.391599e-71"), ])
+row1 = html.Tr([html.Td("C(type)"), html.Td("2.0"), html.Td("632.84"), html.Td("316.42"),html.Td("262.28"),html.Td("8.391599e-71"), ])
 row2 = html.Tr([html.Td("Residual"), html.Td("357.0"),html.Td("430.691667"), html.Td("1.206419"),html.Td(""),html.Td("")])
 table_body = [html.Tbody([row1, row2])]
 zebra_burrow_table1 = dbc.Table(table_header + table_body, bordered=True, size="sm") 
+
+#Tukey HSD table
+hsd_table_header = [
+    html.Thead(html.Tr([html.Th(""),html.Th("group1"), html.Th("group2"), html.Th("Diff"), html.Th("Lower"), html.Th("Upper"), html.Th("q-value"), html.Th("p-value")]))
+]
+hsd_row1 = html.Tr([html.Td("0"), html.Td("control"), html.Td("no zebras"), html.Td("1.80"),html.Td("1.51"),html.Td("2.13"),html.Td("17.90"),html.Td("0.001")])
+hsd_row2 = html.Tr([html.Td("1"), html.Td("control"), html.Td("zebras attached"), html.Td("3.24"),html.Td("2.91"),html.Td("3.58"),html.Td("32.33"),html.Td("0.001") ])
+hsd_row3 = html.Tr([html.Td("2"), html.Td("zebras"), html.Td("zebras attached"), html.Td("1.45"),html.Td("1.12"),html.Td("1.78"),html.Td("14.46"),html.Td("0.001") ])
+hsd_table_body = [html.Tbody([hsd_row1, hsd_row2, hsd_row3])]
+zebra_burrow_table2 = dbc.Table(hsd_table_header + hsd_table_body, bordered=True, size="sm") 
 #footer
 footer = html.Div([
     html.Footer( html.P('Copyright © 2021 BAH - All Rights Reserved.'), id="footer", className='footer-style'),
     ])
+
+
+
+#footer
+footer = html.Div([
+    html.Footer( html.P('Copyright © 2021 BAH - All Rights Reserved.'), id="footer", className='footer-style'),
+    ])
+
+
 
 
 
@@ -394,7 +413,8 @@ def update_plot(value):
                             #{ display: flex; flex-direction: column; }                      
                         ], align="start", width = 6, className='column_left'),
                     dbc.Col([
-                        html.P("Tukey HSD", className="lead")
+                        html.P("Tukey HSD", className="lead"),
+                        zebra_burrow_table2,
                     ], align='top', width=6),
                         #width={"sm": 12, "md": {"size": 6, "order": 3}, "lg":6},
             ], className="row_top"),   
