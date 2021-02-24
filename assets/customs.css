@@ -12,11 +12,11 @@
   left: 0;
   bottom: 0;
   height: 100%; */
-  width: 18rem;
-  margin-bottom: -700px; /* any large number will do */
-  padding-bottom: 700px; 
   background-color: #f8f9fa;
-  overflow-y: scroll;
+  width: 18rem;
+  position: fixed;
+  height: 100%;
+  overflow: auto;
 }
 .plot2 {
     flex: '1';

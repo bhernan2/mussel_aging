@@ -1,0 +1,361 @@
+Day,variable,value,type
+1,T1,0,control
+2,T1,0,control
+3,T1,0,control
+4,T1,2,control
+5,T1,1,control
+6,T1,0,control
+7,T1,0,control
+8,T1,1,control
+9,T1,1,control
+10,T1,2,control
+11,T1,1,control
+12,T1,0,control
+13,T1,0,control
+14,T1,1,control
+15,T1,1,control
+16,T1,1,control
+17,T1,2,control
+18,T1,0,control
+19,T1,0,control
+20,T1,1,control
+21,T1,2,control
+22,T1,1,control
+23,T1,0,control
+24,T1,0,control
+25,T1,1,control
+26,T1,1,control
+27,T1,1,control
+28,T1,2,control
+29,T1,0,control
+30,T1,1,control
+1,T2,0,control
+2,T2,0,control
+3,T2,0,control
+4,T2,0,control
+5,T2,0,control
+6,T2,0,control
+7,T2,0,control
+8,T2,1,control
+9,T2,1,control
+10,T2,0,control
+11,T2,0,control
+12,T2,2,control
+13,T2,2,control
+14,T2,1,control
+15,T2,0,control
+16,T2,0,control
+17,T2,1,control
+18,T2,1,control
+19,T2,0,control
+20,T2,1,control
+21,T2,0,control
+22,T2,0,control
+23,T2,0,control
+24,T2,0,control
+25,T2,0,control
+26,T2,1,control
+27,T2,1,control
+28,T2,0,control
+29,T2,0,control
+30,T2,0,control
+1,T3,0,control
+2,T3,0,control
+3,T3,1,control
+4,T3,3,control
+5,T3,1,control
+6,T3,0,control
+7,T3,0,control
+8,T3,0,control
+9,T3,1,control
+10,T3,2,control
+11,T3,2,control
+12,T3,1,control
+13,T3,3,control
+14,T3,1,control
+15,T3,1,control
+16,T3,1,control
+17,T3,0,control
+18,T3,0,control
+19,T3,0,control
+20,T3,0,control
+21,T3,0,control
+22,T3,0,control
+23,T3,0,control
+24,T3,1,control
+25,T3,1,control
+26,T3,0,control
+27,T3,0,control
+28,T3,1,control
+29,T3,2,control
+30,T3,1,control
+1,T4,0,control
+2,T4,0,control
+3,T4,0,control
+4,T4,0,control
+5,T4,0,control
+6,T4,0,control
+7,T4,1,control
+8,T4,1,control
+9,T4,0,control
+10,T4,0,control
+11,T4,0,control
+12,T4,1,control
+13,T4,2,control
+14,T4,2,control
+15,T4,1,control
+16,T4,0,control
+17,T4,0,control
+18,T4,0,control
+19,T4,0,control
+20,T4,0,control
+21,T4,1,control
+22,T4,0,control
+23,T4,0,control
+24,T4,1,control
+25,T4,0,control
+26,T4,0,control
+27,T4,1,control
+28,T4,2,control
+29,T4,2,control
+30,T4,0,control
+1,T5,0,zebras
+2,T5,2,zebras
+3,T5,2,zebras
+4,T5,1,zebras
+5,T5,2,zebras
+6,T5,0,zebras
+7,T5,1,zebras
+8,T5,1,zebras
+9,T5,2,zebras
+10,T5,3,zebras
+11,T5,1,zebras
+12,T5,3,zebras
+13,T5,4,zebras
+14,T5,4,zebras
+15,T5,2,zebras
+16,T5,3,zebras
+17,T5,4,zebras
+18,T5,4,zebras
+19,T5,4,zebras
+20,T5,2,zebras
+21,T5,2,zebras
+22,T5,3,zebras
+23,T5,4,zebras
+24,T5,3,zebras
+25,T5,3,zebras
+26,T5,3,zebras
+27,T5,3,zebras
+28,T5,2,zebras
+29,T5,3,zebras
+30,T5,3,zebras
+1,T6,0,zebras
+2,T6,1,zebras
+3,T6,2,zebras
+4,T6,2,zebras
+5,T6,1,zebras
+6,T6,3,zebras
+7,T6,4,zebras
+8,T6,4,zebras
+9,T6,4,zebras
+10,T6,4,zebras
+11,T6,2,zebras
+12,T6,3,zebras
+13,T6,2,zebras
+14,T6,3,zebras
+15,T6,3,zebras
+16,T6,3,zebras
+17,T6,3,zebras
+18,T6,1,zebras
+19,T6,2,zebras
+20,T6,3,zebras
+21,T6,3,zebras
+22,T6,3,zebras
+23,T6,3,zebras
+24,T6,3,zebras
+25,T6,4,zebras
+26,T6,3,zebras
+27,T6,3,zebras
+28,T6,3,zebras
+29,T6,3,zebras
+30,T6,2,zebras
+1,T7,0,zebras
+2,T7,0,zebras
+3,T7,2,zebras
+4,T7,2,zebras
+5,T7,3,zebras
+6,T7,2,zebras
+7,T7,1,zebras
+8,T7,1,zebras
+9,T7,2,zebras
+10,T7,3,zebras
+11,T7,3,zebras
+12,T7,3,zebras
+13,T7,3,zebras
+14,T7,4,zebras
+15,T7,3,zebras
+16,T7,4,zebras
+17,T7,4,zebras
+18,T7,4,zebras
+19,T7,4,zebras
+20,T7,2,zebras
+21,T7,3,zebras
+22,T7,3,zebras
+23,T7,3,zebras
+24,T7,2,zebras
+25,T7,2,zebras
+26,T7,3,zebras
+27,T7,3,zebras
+28,T7,3,zebras
+29,T7,3,zebras
+30,T7,3,zebras
+1,T8,0,zebras
+2,T8,1,zebras
+3,T8,2,zebras
+4,T8,2,zebras
+5,T8,2,zebras
+6,T8,1,zebras
+7,T8,2,zebras
+8,T8,2,zebras
+9,T8,2,zebras
+10,T8,3,zebras
+11,T8,2,zebras
+12,T8,3,zebras
+13,T8,3,zebras
+14,T8,3,zebras
+15,T8,2,zebras
+16,T8,2,zebras
+17,T8,2,zebras
+18,T8,1,zebras
+19,T8,2,zebras
+20,T8,2,zebras
+21,T8,2,zebras
+22,T8,0,zebras
+23,T8,0,zebras
+24,T8,1,zebras
+25,T8,3,zebras
+26,T8,3,zebras
+27,T8,3,zebras
+28,T8,1,zebras
+29,T8,2,zebras
+30,T8,2,zebras
+1,T9,0,zebras attached
+2,T9,3,zebras attached
+3,T9,2,zebras attached
+4,T9,2,zebras attached
+5,T9,3,zebras attached
+6,T9,3,zebras attached
+7,T9,3,zebras attached
+8,T9,4,zebras attached
+9,T9,4,zebras attached
+10,T9,4,zebras attached
+11,T9,4,zebras attached
+12,T9,4,zebras attached
+13,T9,5,zebras attached
+14,T9,5,zebras attached
+15,T9,5,zebras attached
+16,T9,4,zebras attached
+17,T9,4,zebras attached
+18,T9,2,zebras attached
+19,T9,3,zebras attached
+20,T9,5,zebras attached
+21,T9,5,zebras attached
+22,T9,5,zebras attached
+23,T9,5,zebras attached
+24,T9,5,zebras attached
+25,T9,3,zebras attached
+26,T9,3,zebras attached
+27,T9,3,zebras attached
+28,T9,4,zebras attached
+29,T9,4,zebras attached
+30,T9,5,zebras attached
+1,T10,0,zebras attached
+2,T10,2,zebras attached
+3,T10,4,zebras attached
+4,T10,5,zebras attached
+5,T10,5,zebras attached
+6,T10,5,zebras attached
+7,T10,5,zebras attached
+8,T10,4,zebras attached
+9,T10,4,zebras attached
+10,T10,1,zebras attached
+11,T10,2,zebras attached
+12,T10,1,zebras attached
+13,T10,2,zebras attached
+14,T10,3,zebras attached
+15,T10,2,zebras attached
+16,T10,4,zebras attached
+17,T10,5,zebras attached
+18,T10,5,zebras attached
+19,T10,5,zebras attached
+20,T10,5,zebras attached
+21,T10,5,zebras attached
+22,T10,5,zebras attached
+23,T10,5,zebras attached
+24,T10,5,zebras attached
+25,T10,5,zebras attached
+26,T10,5,zebras attached
+27,T10,5,zebras attached
+28,T10,5,zebras attached
+29,T10,4,zebras attached
+30,T10,5,zebras attached
+1,T11,0,zebras attached
+2,T11,0,zebras attached
+3,T11,2,zebras attached
+4,T11,2,zebras attached
+5,T11,2,zebras attached
+6,T11,3,zebras attached
+7,T11,5,zebras attached
+8,T11,5,zebras attached
+9,T11,5,zebras attached
+10,T11,5,zebras attached
+11,T11,4,zebras attached
+12,T11,4,zebras attached
+13,T11,3,zebras attached
+14,T11,4,zebras attached
+15,T11,3,zebras attached
+16,T11,4,zebras attached
+17,T11,5,zebras attached
+18,T11,5,zebras attached
+19,T11,5,zebras attached
+20,T11,5,zebras attached
+21,T11,4,zebras attached
+22,T11,5,zebras attached
+23,T11,5,zebras attached
+24,T11,5,zebras attached
+25,T11,5,zebras attached
+26,T11,4,zebras attached
+27,T11,4,zebras attached
+28,T11,4,zebras attached
+29,T11,5,zebras attached
+30,T11,5,zebras attached
+1,T12,0,zebras attached
+2,T12,2,zebras attached
+3,T12,3,zebras attached
+4,T12,3,zebras attached
+5,T12,4,zebras attached
+6,T12,3,zebras attached
+7,T12,4,zebras attached
+8,T12,4,zebras attached
+9,T12,4,zebras attached
+10,T12,2,zebras attached
+11,T12,2,zebras attached
+12,T12,1,zebras attached
+13,T12,5,zebras attached
+14,T12,5,zebras attached
+15,T12,5,zebras attached
+16,T12,5,zebras attached
+17,T12,5,zebras attached
+18,T12,5,zebras attached
+19,T12,5,zebras attached
+20,T12,3,zebras attached
+21,T12,4,zebras attached
+22,T12,4,zebras attached
+23,T12,5,zebras attached
+24,T12,5,zebras attached
+25,T12,5,zebras attached
+26,T12,5,zebras attached
+27,T12,5,zebras attached
+28,T12,4,zebras attached
+29,T12,4,zebras attached
+30,T12,5,zebras attached

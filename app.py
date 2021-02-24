@@ -15,7 +15,7 @@ import numpy as np
 
 from datetime import datetime
 
-from figures import aging_boxplot, zebra_burrow_scatter
+from figures import aging_boxplot, zebra_burrow_scatter, zebra_burrow_boxplot
 
 #sidebar 
 sidebar = html.Div([
@@ -345,6 +345,7 @@ def update_plot(value):
 def update_plot(value):
     if value == "plot1-info":
         return html.Div([
+            dbc.Row([
                     dbc.Col([
                         dcc.Graph(
                             figure = zebra_burrow_scatter(),
@@ -358,7 +359,24 @@ def update_plot(value):
                             style={'display': 'flex', 'vertical-direction': 'column',},),
                             #{ display: flex; flex-direction: column; }                      
                         ], align="center",),
-                        #width={"sm": 12, "md": {"size": 12, "order": 6}, "lg":12},           
+                        #width={"sm": 12, "md": {"size": 12, "order": 6}, "lg":12},
+            ]), 
+            dbc.Row([
+                    dbc.Col([
+                        dcc.Graph(
+                            figure = zebra_burrow_boxplot(),
+                            id='plot2', 
+                            config={
+                                'displayModeBar': False, 
+                                'responsive': True, 
+                                'autosizable':True,
+                                #'fillFrame':True 
+                                },
+                            style={'display': 'flex', 'vertical-direction': 'column',},),
+                            #{ display: flex; flex-direction: column; }                      
+                        ], align="center",),
+                        #width={"sm": 12, "md": {"size": 12, "order": 6}, "lg":12},
+            ]),                     
         ])
     # elif value == 'plot1-info':
     #     return html.Div([

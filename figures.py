@@ -5,8 +5,8 @@ from plotly.subplots import make_subplots
 import plotly.express as px
 
 rename_melt =  pd.read_csv("agers_melt.csv")
-df_rename = pd.read_csv("zebra_mussels/burrow_zebra.csv")
-
+df_rename = pd.read_csv("zebra_mussels/burrow_scatter.csv")
+df_types = pd.read_csv("zebra_mussels/burrow_boxplot.csv")
 def aging_boxplot():
         fig = px.box(rename_melt, 
             x="variable", 
@@ -64,5 +64,18 @@ def zebra_burrow_scatter():
         fig.update_layout(height=700, width=900,
                   title_text="Counts of mussels burrowed ~90% by tanks across days",
                   showlegend=False)
+        return fig
+def zebra_burrow_boxplot():
+        fig = px.box(df_types, 
+            x="type", 
+            y="value", 
+            color="type",
+            boxmode="overlay",
+#            title='<i>L. teres</i>',
+            labels = {'type': 'Type', 'value':'Count'},
+            points='all',
+            color_discrete_sequence=["#601A4A", "#EE442F", "#63ACBE"],
+            )
+        fig.update_layout(height=700, width=900,)
         return fig
 
