@@ -15,7 +15,7 @@ import numpy as np
 
 from datetime import datetime
 
-from figures import aging_boxplot
+from figures import aging_boxplot, zebra_burrow_scatter
 
 #sidebar 
 sidebar = html.Div([
@@ -42,36 +42,36 @@ sidebar = html.Div([
                 html.Br(),
                 html.Br(),
                 #modal for any TXState Alerts
-                dbc.Container([
-                    dbc.Row([
-                        html.H5("TX State Alert"),  
-                            ],justify="center"),
-                        dbc.Row([
-                        dbc.Button("Open", id='open-center', color="danger", className="mr-1", size="lg"),
-                        ], justify="center"),  
-                    html.Br(),
-                            dbc.Row([
-                                dbc.Modal([
-                                dbc.ModalHeader("Alert"),
-                                dbc.ModalBody([
-                                    dbc.Card([
-                                        # dbc.CardImg(src='assets/_alert.png'),
-                                        dbc.CardBody([
-                                            html.P("Texas State University will be closed through 8 a.m. Saturday, February 20 due to inclement weather and continued power outages which have impacted multiple university systems, including phone lines and computer networks. All classes and events are canceled, including virtual/online classes and events. University offices will remain closed. Only designated critical personnel should report to work on the campuses.", className="lead"),
-                                            ]),
-                                        ]),
-                                    ]),
-                                dbc.ModalFooter(
-                                dbc.Button("Close", id="close-center")
-                                ),
-                            ],
-                            id="modal-center",
-                            centered=True,
-                            size="lg",
-                            ),
-                            ]),
+                # dbc.Container([
+                #     dbc.Row([
+                #         html.H5("TX State Alert"),  
+                #             ],justify="center"),
+                #         dbc.Row([
+                #         dbc.Button("Open", id='open-center', color="danger", className="mr-1", size="lg"),
+                #         ], justify="center"),  
+                #     html.Br(),
+                #             dbc.Row([
+                #                 dbc.Modal([
+                #                 dbc.ModalHeader("Alert"),
+                #                 dbc.ModalBody([
+                #                     dbc.Card([
+                #                         # dbc.CardImg(src='assets/_alert.png'),
+                #                         dbc.CardBody([
+                #                             html.P("Texas State University will be closed through 8:00 a.m. on Wednesday, February 24, 2021. due to inclement weather and continued power outages which have impacted multiple university systems, including phone lines and computer networks. All classes and events are canceled, including virtual/online classes and events. University offices will remain closed. Only designated critical personnel should report to work on the campuses.", className="lead"),
+                #                             ]),
+                #                         ]),
+                #                     ]),
+                #                 dbc.ModalFooter(
+                #                 dbc.Button("Close", id="close-center")
+                #                 ),
+                #             ],
+                #             id="modal-center",
+                #             centered=True,
+                #             size="lg",
+                #             ),
+                #             ]),
                         
-                    ], id="modal-style" ,fluid=True),
+                #     ], id="modal-style" ,fluid=True),
                 #turn modal off when there is not an annoucement 
             ],
             vertical=True,
@@ -206,7 +206,19 @@ aging = html.Div([
                     ]),                     
             ],fluid=True, style={'textAlign': 'left'}),     
         ])
-
+zebra = html.Div([
+            dbc.Container([
+                dbc.Row([ 
+                    html.H1("Zebra mussels project", className="display-4"),
+                    html.Br(),
+                    html.P("Description: This space will monitor and track the status of ongoing projects for the stream ecology lab. It will include interactive maps, charts, figures and summaries.", className="lead"),
+                    ]),  
+                dbc.Row([
+                    dcc.Graph(figure = zebra_burrow_scatter(),),
+                ], justify="center")                   
+            ],fluid=True, style={'textAlign': 'left'}),     
+        ])
+    
 footer = html.Div([
     html.Footer( html.P('Copyright © 2021 BAH - All Rights Reserved.'), id="footer", className='footer-style'),
     ])
@@ -228,14 +240,14 @@ app.layout = Dashboard()
 
 
 #modal callback
-@app.callback(
-    Output("modal-center", "is_open"),
-    [Input("open-center", "n_clicks"), Input("close-center", "n_clicks")],
-    [State("modal-center", "is_open")],
-)
-def toggle_modal(n1, n2, is_open):
-    if n1 or n2:
-        return not is_open
+# @app.callback(
+#     Output("modal-center", "is_open"),
+#     [Input("open-center", "n_clicks"), Input("close-center", "n_clicks")],
+#     [State("modal-center", "is_open")],
+# )
+# def toggle_modal(n1, n2, is_open):
+#     if n1 or n2:
+#         return not is_open
 
 
 @app.callback(Output("page-content", "children"), [Input("url", "pathname")])
@@ -278,16 +290,7 @@ def render_page_content(pathname):
             ],fluid=True, style={'textAlign': 'left'}),     
         ])
     elif pathname == "/page-5":
-        return html.Div([
-            dbc.Container([
-                dbc.Row([ 
-                    html.H1("Zebra mussels project", className="display-4"),
-                    html.Br(),
-                    html.P("Description: This space will monitor and track the status of ongoing projects for the stream ecology lab. It will include interactive maps, charts, figures and summaries.", className="lead"),
-                    ]),                     
-            ],fluid=True, style={'textAlign': 'left'}),     
-        ])
-    
+        return zebra
 #dropdown figures callbacks
 @app.callback(
     dash.dependencies.Output('dd-output-container', 'children'),
