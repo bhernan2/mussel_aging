@@ -229,7 +229,7 @@ aging = html.Div([
 zebra = html.Div([
             dbc.Container([
                 dbc.Row([ 
-                    html.H1("Zebra mussels project", className="display-4"),
+                    html.H1("Zebra mussel projects", className="display-4"),
                     html.Br(),
                     html.P("Description: This space will monitor and track the status of ongoing projects for the stream ecology lab. It will include interactive maps, charts, figures and summaries.", className="lead"),
                     ]),
@@ -348,7 +348,7 @@ def update_plot(value):
             dbc.Row([
                     dbc.Col([
                         html.Br(),
-                        html.P('Counts of A. plicata mussels burrowed at ~90% by tanks across days', className='lead'),
+                        html.P('Counts of A. plicata mussels burrowed at ~90% by tanks (T1 ... T12) across days', className='lead'),
                         dcc.Graph(
                             figure = zebra_burrow_scatter(),
                             id='plot1', 
