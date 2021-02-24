@@ -71,11 +71,13 @@ def zebra_burrow_boxplot():
             y="value", 
             color="type",
             boxmode="overlay",
-#            title='<i>L. teres</i>',
+            title='Boxplots of control and treatment (zebra mussels present & zebra mussels attached) tanks. <br>The ends of the box represent the lower and upper quartiles, while the median (second <br>quartile) is marked by a line inside the box.<br><br>',
             labels = {'type': 'Type', 'value':'Count'},
             points='all',
             color_discrete_sequence=["#601A4A", "#EE442F", "#63ACBE"],
             )
-        fig.update_layout(height=700, width=900,)
+        fig.update_layout(height=700, 
+                          width=900,
+                        )
         return fig
 
